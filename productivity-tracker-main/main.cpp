@@ -28,17 +28,7 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR szCmdLine,
 		return (0);
 	}
 
-	hwnd = CreateWindow(szAppName,			// Window Class Name
-		TEXT("The HelloWin Program"),		// Window Caption
-		WS_OVERLAPPEDWINDOW,				// Window Style
-		CW_USEDEFAULT,						// Initial X Position
-		CW_USEDEFAULT,						// Initial Y Position
-		CW_USEDEFAULT,						// Initial X size
-		CW_USEDEFAULT,						// Initial Y size
-		nullptr,							// Parent Window Handle
-		nullptr,							// Window Menu Handle
-		hInstance,							// Program Instance Handle
-		nullptr);							// Creation Parameters
+	INITIALIZE_WINDOW_HANDLER(hwnd)
 
 	ShowWindow(hwnd, iCmdShow);
 	UpdateWindow(hwnd);
